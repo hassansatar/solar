@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Solar</title>
+</head>
+<style>
+
+        .firstcontainer {
+            width: 100%;
+            height: 550px;
+            background-color: rgba(247, 239, 226, 0.774); 
+            padding-top: 10px;       
+            padding: 10px;
+        }
+
+        .turntext {
+            font-size: 35px;
+            color: black;
+        }
+
+         .rooftext {
+            font-size: 35px;
+            color: orangered;
+        }
+
+        .jointext {
+            color: rgba(0, 0, 0, 0.603);
+        }
+
+        /* Toggle Icon */
+        .menu-toggle {
+        font-size: 28px;
+        cursor: pointer;
+        background-color: white;
+        color: #333;
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+        right: 0;
+        z-index: 1001;
+        width: 100%;
+        height: 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        padding: 10px; 
+        }
+
+        .navbutton {
+         width: 50px;
+         height: 50px;
+         background-color: none;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+        }
+
+        .logocontainer {
+            width: 170px;
+            height: auto;
+            background-color: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        padding-top: 60px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        }
+
+        .sidebar.open {
+        left: 0;
+        }
+
+        .logo {
+        color: white;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 30px;
+        }
+
+        .sidebar-links {
+        list-style: none;
+        padding: 0;
+        }
+
+        .sidebar-links li {
+        text-align: center;
+        margin: 15px 0;
+        }
+
+        .sidebar-links li a {
+        color: #333;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px;
+        display: block;
+        transition: 0.3s;
+        }
+
+        .sidebar-links li a:hover,
+        .sidebar-links li a.active {
+        background-color: #444;
+        color: #fff;
+        border-left: 4px solid #0af;
+        }
+
+        /* Main content */
+        .content {
+        padding: 80px 20px;
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
+        }
+
+        .sidebar.open ~ .content {
+        margin-left: 250px;
+        }
+
+        /* Responsive tweaks (optional) */
+        @media (max-width: 600px) {
+        .sidebar.open ~ .content {
+            margin-left: 0;
+        }
+        }
+
+        @media (min-width: 1024px) {
+        .sidebar {
+            left: 0;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .content {
+            margin-left: 250px;
+        }
+        }
+
+        .greencontainer {
+            width: 100%;
+            height: 130px;
+            background-color: rgba(172, 255, 47, 0.233);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 128, 0, 0.397);
+        }
+
+        .box1 {
+            width: 250px;
+            height: 50px;
+            background-color: none;
+            margin-top: 20px;
+            margin-left: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box2 {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box3 {
+            width: 400px;
+            height: 40px;
+            background-color: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            margin-left: 30px; 
+        }
+
+       .features {
+            display: flex;              
+            justify-content: space-around;
+            text-align: center;         
+            padding: 20px;
+            margin-top: 10px;      
+            }
+
+            .feature {
+            width: 150px;
+            }
+
+            .feature img {
+            width: 50px;                
+            height: 50px;
+            border-radius: 10px;
+            }
+
+            .feature h4 {
+            margin: 5px 0 0;
+            font-weight: bold;
+            }
+
+            .feature p {
+            margin: 3px 0 0;
+            font-size: 14px;
+            color: #666;
+            }
+        
+    
+    </style>
+
+    
+<body>
+<div class="menu-toggle" id="menu-toggle">
+    <div class="logocontainer">
+        <img src="image\solarlogoo.jpg" width="160px">
+    </div>
+    <div class="navbutton">☰</div>
+     </div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">MySidebar</div>
+    <ul class="sidebar-links">
+      <li><a href="#" class="active">Dashboard</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Messages</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </aside>
+ <div class="firstcontainer">
+    
+    <b class="turntext">Turn Your</b><br>
+    <b class="rooftext">Roof Into Gold</b>
+
+    <p class="jointext">Join the solar revolution and start earning money form<br>
+       day one. Our premium solar systems pay for themselves<br>
+       while you sleep.
+    </p>
+   
+    <div class="greencontainer">
+        <div class="box1">
+            <div class="box2"><img src="image\dollarsign.png" width="30px"></div>&nbsp;&nbsp;&nbsp;
+            <p style="color: green;"><b>$3,247/year</b><br> Average homeowner earnings
+            </p>
+        </div>
+        <div class="box3">
+            <p style="color: green;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0</b><br> Down Payment</p>
+            <p style="color: green;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;90%</b><br> Bill Reduction</p>
+            <p style="color: green;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25yr</b><br> Guarantee</p>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <img src="image\shield.jpg" alt="Shield icon">
+            <h4>Fully Licensed</h4>
+            <p>& Insured</p>
+        </div>
+
+        <div class="feature">
+            <img src="image\cup.jpg" alt="Award icon">
+            <h4>Award Winner</h4>
+            <p>2024 Excellence</p>
+        </div>
+
+        <div class="feature">
+            <img src="image\volt.jpg" alt="Lightning icon">
+            <h4>Same Day</h4>
+            <p>Quote Approval</p>
+        </div>
+    </div>
+
+</div>
+    
+</body>
+ <script>
+    const toggle = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
+const links = document.querySelectorAll('.sidebar-links a');
+
+// Toggle sidebar open/close
+toggle.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+});
+
+// Handle active link change
+links.forEach(link => {
+  link.addEventListener('click', function () {
+    // Remove active class from all links
+    links.forEach(l => l.classList.remove('active'));
+    // Add active class to clicked link
+    this.classList.add('active');
+    // Optionally close sidebar on mobile after click
+    sidebar.classList.remove('open');
+  });
+});
+ </script>
+</html>
